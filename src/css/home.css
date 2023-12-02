@@ -347,14 +347,14 @@ section.baristas_platform {
         width: unset;
         min-width: clamp(10rem, 38vw, 80rem);
         flex: 1;
-        max-width: clamp(10rem, 45vw, 120rem);
+        max-width: clamp(10rem, 40vw, 120rem);
         height: fit-content;
         position: sticky;
         top: -1rem;
     }
 
     .baristas_platform .content {
-        max-width: clamp(15rem, 35vw, 67rem);
+        max-width: clamp(15rem, 42vw, 67rem);
     }
     
 }
