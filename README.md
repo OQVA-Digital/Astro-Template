@@ -1,1 +1,1 @@
-# Broken Dreams 2
+# Astro Template for OQVA Projects
