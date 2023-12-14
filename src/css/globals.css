@@ -4,56 +4,36 @@ html.sr .reveal {
 
 :root {
     --light:#fff;
-    --light-a:#e3e8ff;
-    --light-b:#f3f6ff;
 
-    --dark:#222222;
-    --dark-a:#121a39;
+    --dark:#000;
 
-    --primary:#334ff5;
-    --primary-l1:#8f9fff;
-    --primary-l2:#5472e4;
+    --primary:cyan;
 
-    --highlight:#f53347;
-
-    --grey:#444444;
+    --highlight:red;
 
     --max-width: 135rem;
+    --pace:81vw;
+    --border-radius: 1rem;
 
-    --width-1:clamp(15rem, 81vw, var(--max-width));
-    --width-2:clamp(15rem, 95vw, var(--max-width));
-    --width-3:clamp(15rem, 81vw, 160rem);
+    --width:clamp(9rem, var(--pace), var(--max-width));
 
-    --corner-width: calc((100vw - var(--width-1)) / 2);
-    --limited-corner: clamp(-30rem, calc(var(--corner-width) * -1), 80rem);
+    --corner-width: calc((100vw - var(--width)) / 2);
 
     --header-height:clamp(1rem,17vmin,8rem);
-
-    --testimonial-width:clamp(15rem, 75vw, 100rem);
 }
 
 .width1 {
-    width: var(--width-1);
+    width: var(--width);
     margin-inline: auto;
 }
 
-.width2 {
-    width: var(--width-2);
-    margin-inline: auto;
-}
-
-.width3 {
-    width: var(--width-3);
-    margin-inline: auto;
-}
-
-.scroll_margin_top {
+*[id] {
     scroll-margin-top: calc(var(--header-height) + 4rem);
 }
 
 @font-face {
-    font-family: 'LexendDeca';
-    src: url('/fonts/LexendDeca-VariableFont_wght.ttf');
+    font-family: 'FONT-NAME';
+    src: url('/fonts/FONT-NAME');
     font-weight: 100 900;
     font-style: normal;
     font-display: swap;
@@ -66,10 +46,10 @@ html {
 }
 
 body {
-    font-family: 'LexendDeca', sans-serif;
+    font-family: 'FONT-NAME', sans-serif;
     background-color: var(--light);
     color: var(--dark);
-    position: relative;
+    -webkit-font-smoothing: antialiased;
 }
 
 
@@ -234,3 +214,106 @@ body {
 }
 
 
+
+
+
+
+
+
+/* RESETS */
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html, body, p, h1, h2, h3, h4, h5, h6, span {
+    margin: 0;
+    overflow-wrap: break-word;
+    cursor: inherit;
+}
+
+p:not(a > p), span:not(a > span) {
+    cursor: default;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    width: fit-content;
+    font-weight: 600;
+}
+
+input, button, textarea, select {
+    font: inherit;
+}
+
+a {
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+    color: unset;
+    cursor: pointer;
+}
+
+a h1, a h2, a h3, a h4, a h5, h5 {
+    cursor: pointer;
+}
+
+img {
+    user-select: none;
+    max-width: 100%;
+    height: auto;
+    width: auto;
+    object-fit: contain;
+    object-position: center;
+}
+
+video {
+    background-size: cover;
+    background-position: center;
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+button {
+    background-color: transparent;
+    outline-color: transparent;
+    border: unset;
+    padding: unset;
+    font-family: inherit;
+    -webkit-tap-highlight-color: transparent;
+    cursor: pointer;
+}
+
+button:focus-visible, button:not([type="submit"]):focus-visible {
+    outline: 0.1rem solid transparent;
+}
+
+ol, ul, li {
+    padding: 0;
+    list-style: none;
+    margin-block: 0;
+}
+
+hr {
+    border:none;
+    margin: unset;
+    height: 0.1rem;
+}
+
+noscript {
+    font-size: 2rem;
+    text-align: center;
+    display: block;
+    position: absolute;
+    background-color: var(--light);
+    z-index: 10;
+    color: var(--dark);
+    margin-inline: auto;
+    padding: 1rem;
+    border: 0.2rem solid var(--highlight);
+    max-width: 80%;
+    inset: 0;
+    height: fit-content;
+    margin: auto;
+}
