@@ -2,9 +2,7 @@
 // META
 
 export const SITE_TITLE = "";
-
 export const SITE_DESCRIPTION = "";
-
 export const SITE_KEYWORDS = ""
     
 
@@ -24,5 +22,4 @@ export const EMAIL = ""
 // LINKS
 
 export const FACEBOOK_URL = ""
-
 export const LINKEDIN_URL = ""
