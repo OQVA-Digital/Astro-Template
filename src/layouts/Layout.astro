@@ -3,9 +3,10 @@ interface Props {
 	title?: string;
 	description?: string;
 	keywords?: string;
+	hasOQVABadge?: string;
 }
 
-const { title, description, keywords } = Astro.props;
+const { title, description, keywords, hasOQVABadge } = Astro.props;
 
 import BaseHead from '../components/BaseHead.astro';
 import OQVABadge from '../components/OQVABadge.astro';
@@ -29,6 +30,8 @@ import Footer from '../components/Footer.astro';
 		<slot />
 
 		<Footer/>
-		<OQVABadge/>
+		{hasOQVABadge != "false" ? (
+			<OQVABadge/>
+		) : null}
 	</body>
 </html>
