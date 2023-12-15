@@ -15,6 +15,7 @@ import { SITE_TITLE, SITE_DESCRIPTION, SITE_KEYWORDS, OG_IMAGE } from "../../con
 
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import CookieConsent from '../components/CookieConsent.astro';
 ---
 
 <!doctype html>
@@ -30,6 +31,9 @@ import Footer from '../components/Footer.astro';
 		<slot />
 
 		<Footer/>
+
+		<CookieConsent/>
+
 		{hasOQVABadge != "false" ? (
 			<OQVABadge/>
 		) : null}
