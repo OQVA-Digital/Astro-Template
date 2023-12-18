@@ -4,6 +4,9 @@
 export const SITE_TITLE = "";
 export const SITE_DESCRIPTION = "";
 export const SITE_KEYWORDS = ""
+
+export const BRAND_NAME = "";
+export const LEGAL_NAME = "";
     
 
 // SOCIAL SHARING IMAGE
@@ -21,5 +24,6 @@ export const EMAIL = ""
 
 // LINKS
 
+export const GOV_REGISTRY = ""
 export const FACEBOOK_URL = ""
 export const LINKEDIN_URL = ""
